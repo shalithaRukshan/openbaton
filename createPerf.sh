@@ -14,9 +14,8 @@ echo "File creation completed"
 crontab -l > mycron
 #echo new cron into cron file
 wd=`pwd`
-new_path="$wd/performance.sh"
+new_path="$wdperformance.sh"
 echo $new_path
-echo "aaaaaaaaaaaa"
 echo "* * * * * $new_path" >> mycron
 #install new cron file
 crontab mycron
