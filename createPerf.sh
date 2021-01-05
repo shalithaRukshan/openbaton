@@ -16,7 +16,7 @@ crontab -l > mycron
 wd=`pwd`
 new_path="$wdperformance.sh"
 echo $new_path
-echo "* * * * * $new_path" >> mycron
+echo "* * * * * /performance.sh" >> mycron
 #install new cron file
 crontab mycron
 rm mycron
