@@ -8,7 +8,7 @@ echo "======================================CONFIGURE SURICATA==================
 cd suricata-6.0.1/
 ./configure --enable-nfqueue --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 sudo make install-full
-ethtool -K eth0 gro off lro offY
+ethtool -K ens3 gro off lro offY
 
 echo "======================================START SURICATA==========================================="
-sudo /usr/bin/suricata -c /etc/suricata/suricata.yaml -i eth0 --init-errors-fatal &
+sudo /usr/bin/suricata -c /etc/suricata/suricata.yaml -i ens3 --init-errors-fatal &
